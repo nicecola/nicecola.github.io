@@ -1,8 +1,59 @@
-<meta http-equiv="refresh" content="0;url=http://rom.52msr.cn" />
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<title>正在进入，请稍等</title>
-
+<!doctype html>
+<html lang="zh">
+<head>
+<title>域名变更通知</title>
+<!-- MDUI CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+  crossorigin="anonymous"
+/>
+<!-- MDUI JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"
+></script>
+	<style>
+		p{
+			text-align : center;
+		}
+		
+		p span{
+			color:red;
+		}	
+	</style>	
 </head>
+<body>
 
+<div class="mdui-container">
+
+<div class="mdui-typo-display-4">
+<center><b>网站域名变更</center></div>
+
+<p><del class="mdui-typo-display-2">rom.52craft.cn已弃用</del>，</p>
+
+
+	<p>
+	<span class="mdui-typo-display-2"id = "time">10</span>秒后，跳转到rom.52msr.cn
+	</p>
+	
+	
+	</div>
+    <script>
+		var time = 10 ;
+		function showTime (){
+			time--;
+			if(time<=0){
+				//clearInterval(id);
+				location.href = "http://rom.52msr.cn";
+			}
+			var sp = document.getElementById("time");
+			sp.innerHTML = time ;
+		}	
+		var id = setInterval(showTime,1000);
+
+	</script>
+</body>
+</html>
